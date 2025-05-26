@@ -1,0 +1,28 @@
+[project]
+name = 'perudo_bots'
+requires-python = '>= 3.13'
+dynamic = ['version']
+dependencies = [
+    "gymnasium",
+]
+
+[project.optional-dependencies]
+dev = [
+    "mypy",
+    "pytest",
+    "pyright",
+]
+
+[build-system]
+requires = ['setuptools>=68']
+build-backend = 'setuptools.build_meta'
+
+[tool.setuptools.packages.find]
+where = ["./src"]
+include = ["perudo_bots"]
+
+[tool.setuptools.dynamic]
+version = {attr = "perudo_bots.__version__"}
+
+[tool.mypy]
+strict = true

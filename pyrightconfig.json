@@ -1,0 +1,6 @@
+{
+  "include": ["src"],
+  "exclude": ["*venv*", "src/*.egg-info"],
+  "pythonVersion": "3.13",
+  "typeCheckingMode": "strict"
+}
